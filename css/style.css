@@ -1,0 +1,133 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+     background-image: url("http://cdn.ebaumsworld.com/mediaFiles/picture/2274124/82733155.jpg");
+     background-size: 100%;
+}
+.middleImage {
+     margin: 0 auto;
+     padding: 200px 50px;
+     max-width: 500px;
+}
+.center {
+     width: 100%;
+     text-align: center;
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/* Center the container */
+/*#container {
+	width: 960px;
+	margin: auto;
+}*/
+
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+/* entire container, keeps perspective */
+.flip-container {
+     perspective: 1000;
+}
+     /* flip the pane when hovered */
+     .flip-container:hover .flipper, .flip-container.hover .flipper {
+          transform: rotateY(180deg);
+     }
+
+.flip-container, .front, .back {
+     width: 320px;
+     height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+     transition: 0.6s;
+     transform-style: preserve-3d;
+
+     position: relative;
+     text-align: center;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+     backface-visibility: hidden;
+
+     position: absolute;
+     top: 0;
+     left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+     z-index: 2;
+     /* for firefox 31 */
+     transform: rotateY(0deg);
+
+}
+
+/* back, initially hidden pane */
+.back {
+     transform: rotateY(180deg);
+}
+
+
+
