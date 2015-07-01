@@ -50,7 +50,7 @@ body {
      font-size: 12px;
      line-height: 1.4;
      font-family: Helvetica, Arial, sans-serif;
-     background-image: url("http://cdn.ebaumsworld.com/mediaFiles/picture/2274124/82733155.jpg");
+     background-image: url("http://pages.chef.io/rs/255-VFB-268/images/unikitten-plain.jpg");
      background-size: 100%;
 }
 .middleImage {
@@ -129,5 +129,25 @@ footer {
      transform: rotateY(180deg);
 }
 
+.summitLink {
+     width:100%;
+     height: 600px;
+     background-color: orange;
+     opacity: 0;
+     display: none;
+}
+
+
+@media (max-width: 1024px) {
+  body {
+    background-image: url("http://pages.chef.io/rs/255-VFB-268/images/unikitten-metal.png");
+  }
+  .flip-container {
+     display: none;
+  }
+  .summitLink {
+     display: block;
+  }
+}
 
 
